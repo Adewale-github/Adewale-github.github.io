@@ -109,6 +109,110 @@
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     .about-photo { aspect-ratio: 1/1; max-width: 220px; margin: 0 auto; }
   }
+
+  /* --- Premium portfolio additions --- */
+  .hero-trust { margin-top: 1.5rem; display:flex; gap:.75rem; flex-wrap:wrap; justify-content:center; color:rgba(245,247,251,.62); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; opacity:0; animation:fadeIn 1s 1.2s forwards; }
+  .hero-trust i { color:var(--gold); font-style:normal; }
+
+  .section-intro { max-width:680px; color:#64748b; line-height:1.8; font-size:.92rem; }
+  .impact-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-top:2.2rem; }
+  .impact-card { padding:1.4rem; border-radius:14px; background:var(--white); border:1px solid #e2e8f0; box-shadow:0 5px 20px rgba(15,30,60,.05); }
+  .impact-card strong { display:block; font-family:'Playfair Display',serif; font-size:1.8rem; color:var(--navy); }
+  .impact-card span { display:block; margin-top:.35rem; font-size:.7rem; color:#64748b; text-transform:uppercase; letter-spacing:.1em; }
+
+  #sql-lab { background:#0a1428; color:var(--white); }
+  #sql-lab .section-title { color:var(--white); }
+  #sql-lab .section-intro { color:#94a3b8; }
+  .sql-shell { margin-top:2.2rem; border:1px solid rgba(255,255,255,.1); border-radius:16px; overflow:hidden; background:#07101f; box-shadow:0 20px 50px rgba(0,0,0,.25); }
+  .sql-toolbar { display:flex; align-items:center; gap:.6rem; padding:.85rem 1rem; background:#0e1b31; border-bottom:1px solid rgba(255,255,255,.08); flex-wrap:wrap; }
+  .sql-dot { width:10px; height:10px; border-radius:50%; background:#64748b; }
+  .sql-file { margin-left:.5rem; color:#cbd5e1; font-size:.75rem; letter-spacing:.05em; }
+  .sql-tabs { display:flex; gap:.45rem; margin-left:auto; }
+  .sql-tab { border:1px solid rgba(255,255,255,.12); background:transparent; color:#94a3b8; padding:.45rem .65rem; border-radius:7px; font-size:.68rem; cursor:pointer; }
+  .sql-tab.active,.sql-tab:hover { background:var(--gold); color:var(--navy); border-color:var(--gold); }
+  .sql-pane { display:none; position:relative; }
+  .sql-pane.active { display:block; }
+  .sql-code { margin:0; padding:1.5rem; overflow:auto; min-height:300px; max-height:430px; color:#dbeafe; font:500 .78rem/1.8 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace; white-space:pre; }
+  .copy-sql { position:absolute; top:1rem; right:1rem; background:#152541; border:1px solid rgba(255,255,255,.12); color:#cbd5e1; padding:.45rem .7rem; border-radius:7px; cursor:pointer; font-size:.68rem; }
+  .copy-sql:hover { border-color:var(--gold); color:var(--gold); }
+  .sql-note { padding:1rem 1.5rem; border-top:1px solid rgba(255,255,255,.08); color:#94a3b8; font-size:.75rem; line-height:1.7; }
+
+  .sql-topics { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1.5rem; }
+  .sql-topic { border:1px solid rgba(255,255,255,.08); background:#0e1b31; border-radius:12px; padding:1.1rem; }
+  .sql-topic b { display:block; color:var(--white); font-size:.82rem; margin-bottom:.35rem; }
+  .sql-topic span { color:#94a3b8; font-size:.72rem; line-height:1.6; }
+
+  .workflow-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:.8rem; margin-top:2rem; }
+  .workflow-step { padding:1rem; background:var(--white); border:1px solid #e2e8f0; border-radius:12px; text-align:center; }
+  .workflow-step .num { width:30px; height:30px; display:flex; align-items:center; justify-content:center; margin:0 auto .7rem; border-radius:50%; background:var(--navy); color:var(--gold); font-size:.72rem; font-weight:700; }
+  .workflow-step b { display:block; font-size:.75rem; color:var(--navy); }
+  .workflow-step span { display:block; margin-top:.3rem; color:#64748b; font-size:.66rem; line-height:1.5; }
+
+  .project-stack { display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.9rem; }
+  .stack-chip { border:1px solid rgba(201,168,76,.35); color:#e6c86b; padding:.25rem .5rem; border-radius:999px; font-size:.62rem; letter-spacing:.05em; }
+  .project-actions { display:flex; gap:.7rem; margin-top:1.1rem; flex-wrap:wrap; }
+  .mini-btn { text-decoration:none; color:var(--white); border:1px solid rgba(255,255,255,.16); padding:.45rem .7rem; border-radius:7px; font-size:.65rem; }
+  .mini-btn:hover { border-color:var(--gold); color:var(--gold); }
+
+  .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2rem; }
+  .service { background:var(--white); border-radius:14px; padding:1.4rem; border:1px solid #e2e8f0; }
+  .service h3 { font-family:'Playfair Display',serif; color:var(--navy); font-size:1rem; margin:.6rem 0; }
+  .service p { color:#64748b; font-size:.78rem; line-height:1.7; }
+
+  /* --- Dashboard showcase --- */
+  #dashboards { background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%); }
+  .dashboard-header { display:flex; justify-content:space-between; gap:2rem; align-items:end; }
+  .dashboard-badge { display:inline-flex; align-items:center; gap:.5rem; padding:.45rem .7rem; border:1px solid #dbe3ee; border-radius:999px; background:#fff; color:var(--navy); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; }
+  .dashboard-badge::before { content:''; width:7px; height:7px; border-radius:50%; background:#2f8f46; box-shadow:0 0 0 4px rgba(47,143,70,.12); }
+  .dashboard-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; margin-top:2.5rem; }
+  .dashboard-card { background:#fff; border:1px solid #dfe6ef; border-radius:18px; overflow:hidden; box-shadow:0 14px 40px rgba(15,30,60,.08); transition:transform .25s, box-shadow .25s, border-color .25s; }
+  .dashboard-card:hover { transform:translateY(-6px); border-color:rgba(201,168,76,.65); box-shadow:0 20px 50px rgba(15,30,60,.13); }
+  .dashboard-preview { position:relative; background:#e9eef5; overflow:hidden; cursor:pointer; }
+  .dashboard-preview img { display:block; width:100%; height:310px; object-fit:cover; object-position:top; transition:transform .45s; }
+  .dashboard-card:hover .dashboard-preview img { transform:scale(1.025); }
+  .dashboard-overlay { position:absolute; inset:auto 0 0 0; padding:1rem; background:linear-gradient(transparent,rgba(5,15,30,.82)); color:#fff; opacity:0; transition:opacity .25s; }
+  .dashboard-card:hover .dashboard-overlay { opacity:1; }
+  .dashboard-overlay span { font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; }
+  .dashboard-body { padding:1.35rem 1.4rem 1.5rem; }
+  .dashboard-kicker { color:var(--gold); font-size:.65rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+  .dashboard-title { font-family:'Playfair Display',serif; color:var(--navy); font-size:1.15rem; margin:.35rem 0 .55rem; }
+  .dashboard-desc { color:#64748b; font-size:.78rem; line-height:1.7; }
+  .dashboard-metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:.6rem; margin-top:1rem; }
+  .dashboard-metric { background:#f7f9fc; border:1px solid #e6ebf2; border-radius:10px; padding:.7rem; }
+  .dashboard-metric strong { display:block; color:var(--navy); font-size:1rem; }
+  .dashboard-metric span { display:block; color:#7b8798; font-size:.58rem; margin-top:.18rem; text-transform:uppercase; letter-spacing:.06em; }
+  .dashboard-tools { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:1rem; }
+  .dashboard-tools span { padding:.3rem .55rem; border-radius:999px; background:#f0f4f9; color:#42526b; font-size:.6rem; border:1px solid #e1e8f0; }
+  .dashboard-note { margin-top:1.5rem; padding:1rem 1.1rem; border-left:3px solid var(--gold); background:#fff; border-radius:0 10px 10px 0; color:#64748b; font-size:.75rem; line-height:1.7; box-shadow:0 4px 18px rgba(15,30,60,.04); }
+  .dashboard-note strong { color:var(--navy); }
+  .dashboard-modal { position:fixed; inset:0; z-index:1000; display:none; align-items:center; justify-content:center; padding:2rem; background:rgba(3,10,22,.88); backdrop-filter:blur(8px); }
+  .dashboard-modal.open { display:flex; }
+  .dashboard-modal img { max-width:min(1200px,94vw); max-height:88vh; object-fit:contain; border-radius:12px; box-shadow:0 25px 80px rgba(0,0,0,.5); }
+  .dashboard-close { position:absolute; top:1.2rem; right:1.4rem; width:42px; height:42px; border-radius:50%; border:1px solid rgba(255,255,255,.25); background:rgba(255,255,255,.08); color:#fff; font-size:1.4rem; cursor:pointer; }
+  .dashboard-close:hover { background:var(--gold); color:var(--navy); border-color:var(--gold); }
+
+  @media(max-width:800px) {
+    .dashboard-header { display:block; }
+    .dashboard-grid { grid-template-columns:1fr; }
+  }
+  @media(max-width:640px) {
+    .dashboard-preview img { height:240px; }
+    .dashboard-metrics { grid-template-columns:1fr; }
+    .dashboard-modal { padding:1rem; }
+  }
+
+  @media(max-width:800px) {
+    .impact-strip { grid-template-columns:repeat(2,1fr); }
+    .workflow-grid { grid-template-columns:repeat(2,1fr); }
+    .sql-topics,.services-grid { grid-template-columns:1fr; }
+    .sql-tabs { margin-left:0; width:100%; overflow:auto; }
+  }
+  @media(max-width:640px) {
+    .hero-cta { display:flex; flex-direction:column; width:min(320px,100%); }
+    .hero-cta .btn { justify-content:center; margin-left:0; }
+    .impact-strip { grid-template-columns:1fr 1fr; }
+  }
+
 </style>
 </head>
 <body>
@@ -118,7 +222,9 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#dashboards">Dashboards</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#sql-lab">SQL Lab</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -139,7 +245,11 @@
   </div>
   <div class="hero-cta">
     <a href="#projects" class="btn btn-gold">View My Work</a>
+    <a href="#sql-lab" class="btn btn-outline">Explore My SQL</a>
     <a href="#contact" class="btn btn-outline">Get In Touch</a>
+  </div>
+  <div class="hero-trust">
+    <span>SQL</span><i>•</i><span>Power BI</span><i>•</i><span>Python</span><i>•</i><span>Excel</span><i>•</i><span>Looker Studio</span>
   </div>
   <div class="scroll-hint">
     <div class="scroll-line"></div>
@@ -155,7 +265,7 @@
     </div>
     <div class="about-grid reveal">
       <div class="about-photo">
-        <img src="data:image/jpeg;base64,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" alt="Ayomide Ajewole" />
+        <img src="profile.jpg" alt="Ayomide Ajewole" />
       </div>
       <div class="about-text">
         <p>I'm a results-driven Data Analyst with 3+ years of experience turning complex, multi-system data into clear insights that help businesses move faster and smarter. Based in Lagos, Nigeria, I've worked across data analysis, business intelligence, and quality assurance — building dashboards, writing SQL, and delivering executive-ready reports that actually get used.</p>
@@ -166,6 +276,23 @@
           <div class="stat"><div class="stat-num">2</div><div class="stat-label">Companies</div></div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="impact">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">By The Numbers</div>
+      <div class="section-title">Turning Data Into Business Impact</div>
+      <p class="section-intro">I combine SQL, BI dashboards, data cleaning and business analysis to turn raw operational data into reporting that people can actually use.</p>
+    </div>
+    <div class="impact-strip reveal">
+      <div class="impact-card"><strong>3+</strong><span>Years Experience</span></div>
+      <div class="impact-card"><strong>30%</strong><span>Reporting Time Saved</span></div>
+      <div class="impact-card"><strong>1.8M+</strong><span>Subscriptions Analyzed</span></div>
+      <div class="impact-card"><strong>₦98M+</strong><span>Revenue Tracked</span></div>
     </div>
   </div>
 </section>
@@ -195,6 +322,66 @@
         <div class="exp-date">February 2022 – March 2023</div>
         <div class="exp-desc">Gathered system requirements, validated and cleansed datasets, conducted system testing, and maintained documentation to support sound business decision-making.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="dashboards">
+  <div class="section-inner">
+    <div class="dashboard-header reveal">
+      <div>
+        <div class="section-label">Business Intelligence</div>
+        <div class="section-title">Interactive Dashboard Portfolio</div>
+        <p class="section-intro">Real dashboard work presented as portfolio case studies — combining KPI design, trend analysis, operational reporting and executive-ready visual storytelling.</p>
+      </div>
+      <div class="dashboard-badge">Power BI & Looker Studio</div>
+    </div>
+
+    <div class="dashboard-grid reveal">
+      <article class="dashboard-card">
+        <div class="dashboard-preview" data-dashboard="dashboard-renewals.png" role="button" tabindex="0" aria-label="Open subscription and renewal dashboard">
+          <img src="dashboard-renewals.png" alt="RBT subscription and renewal analytics dashboard" loading="lazy">
+          <div class="dashboard-overlay"><span>Click to expand dashboard</span></div>
+        </div>
+        <div class="dashboard-body">
+          <div class="dashboard-kicker">RBT Report · Subscription Analytics</div>
+          <div class="dashboard-title">Subscription & Renewal Performance</div>
+          <p class="dashboard-desc">A KPI-led view of subscription volume, renewals and non-renewals, with MTD performance, daily trend monitoring and month-over-month comparison.</p>
+          <div class="dashboard-metrics">
+            <div class="dashboard-metric"><strong>1.5M</strong><span>Total subscriptions</span></div>
+            <div class="dashboard-metric"><strong>1.1M</strong><span>Total renewals</span></div>
+            <div class="dashboard-metric"><strong>340.2K</strong><span>Non renewals</span></div>
+          </div>
+          <div class="dashboard-tools">
+            <span>Power BI</span><span>KPI Design</span><span>Trend Analysis</span><span>Renewal Analytics</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="dashboard-card">
+        <div class="dashboard-preview" data-dashboard="dashboard-revenue.png" role="button" tabindex="0" aria-label="Open revenue and subscription dashboard">
+          <img src="dashboard-revenue.png" alt="Revenue and subscription performance dashboard" loading="lazy">
+          <div class="dashboard-overlay"><span>Click to expand dashboard</span></div>
+        </div>
+        <div class="dashboard-body">
+          <div class="dashboard-kicker">Truthware · Revenue Intelligence</div>
+          <div class="dashboard-title">Revenue & Subscription Performance</div>
+          <p class="dashboard-desc">An operational reporting view combining daily and monthly revenue, subscription trends, new subscriptions, partner performance and revenue distribution.</p>
+          <div class="dashboard-metrics">
+            <div class="dashboard-metric"><strong>616.6M</strong><span>Total revenue</span></div>
+            <div class="dashboard-metric"><strong>9.7M</strong><span>Total subscriptions</span></div>
+            <div class="dashboard-metric"><strong>1,126</strong><span>Unique content</span></div>
+          </div>
+          <div class="dashboard-tools">
+            <span>Looker Studio</span><span>Revenue Analytics</span><span>Partner Analysis</span><span>Operational Reporting</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="dashboard-note reveal">
+      <strong>What these dashboards demonstrate:</strong> translating raw transactional data into KPI structures, trend views, comparison metrics and drill-down-ready reporting that helps stakeholders understand performance quickly.
     </div>
   </div>
 </section>
@@ -249,9 +436,212 @@
           <div class="project-tag">Power BI · Business Intelligence</div>
           <div class="project-title">Truthware Revenue Performance Report</div>
           <div class="project-desc">Internal analytics dashboard tracking ₦98.4M revenue, 1.8M subscriptions, and 16 active singers — with transaction-level detail table and revenue distribution by type.</div>
+          <div class="project-stack">
+            <span class="stack-chip">Power BI</span><span class="stack-chip">DAX</span><span class="stack-chip">SQL</span><span class="stack-chip">Data Modeling</span>
+          </div>
+          <div class="project-actions">
+            <a href="#sql-lab" class="mini-btn">View SQL Patterns</a>
+            <a href="#contact" class="mini-btn">Discuss Project</a>
+          </div>
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">What I Solve</div>
+      <div class="section-title">Analytics That Supports Decisions</div>
+      <p class="section-intro">From raw transactional data to executive-ready dashboards, I focus on clean logic, reliable metrics and clear business storytelling.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service"><div>🗄️</div><h3>SQL & Data Extraction</h3><p>Complex joins, CTEs, window functions, aggregations, validation queries and reusable reporting logic.</p></div>
+      <div class="service"><div>📊</div><h3>BI & Dashboards</h3><p>Power BI, DAX and Looker Studio reporting designed around KPIs, trends, segmentation and operational decisions.</p></div>
+      <div class="service"><div>🧹</div><h3>Data Quality</h3><p>Cleaning, duplicate checks, reconciliation, anomaly detection and consistency checks before metrics reach stakeholders.</p></div>
+      <div class="service"><div>📈</div><h3>Performance Analysis</h3><p>Revenue, subscriptions, content performance, customer activity and partner-level reporting.</p></div>
+      <div class="service"><div>🐍</div><h3>Python Analytics</h3><p>Pandas-based exploration, transformation and repeatable analysis for datasets that outgrow spreadsheets.</p></div>
+      <div class="service"><div>🎯</div><h3>Business Storytelling</h3><p>Translating technical findings into concise insights, recommendations and decision-ready reports.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sql-lab">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">SQL Portfolio</div>
+      <div class="section-title">SQL Lab — How I Work With Data</div>
+      <p class="section-intro">A collection of practical SQL patterns I use for reporting, analysis and data quality. The examples are portfolio demonstrations and can be adapted to MySQL or SQL Server syntax.</p>
+    </div>
+
+    <div class="sql-shell reveal">
+      <div class="sql-toolbar">
+        <span class="sql-dot"></span><span class="sql-dot"></span><span class="sql-dot"></span>
+        <span class="sql-file">analytics_queries.sql</span>
+        <div class="sql-tabs">
+          <button class="sql-tab active" data-sql="revenue">Revenue</button>
+          <button class="sql-tab" data-sql="window">Window Functions</button>
+          <button class="sql-tab" data-sql="cte">CTE</button>
+          <button class="sql-tab" data-sql="quality">Data Quality</button>
+          <button class="sql-tab" data-sql="ranking">Ranking</button>
+          <button class="sql-tab" data-sql="cohort">Cohort</button>
+        </div>
+      </div>
+
+      <div class="sql-pane active" id="sql-revenue">
+        <button class="copy-sql" data-copy="code-revenue">Copy</button>
+        <pre class="sql-code" id="code-revenue">-- Daily revenue and subscription performance
+SELECT
+    CAST(transaction_date AS DATE) AS report_date,
+    COUNT(DISTINCT transaction_id) AS transactions,
+    COUNT(DISTINCT subscriber_id) AS active_subscribers,
+    SUM(revenue) AS total_revenue,
+    AVG(revenue) AS avg_transaction_value
+FROM subscriptions
+WHERE transaction_date &gt;= '2026-01-01'
+GROUP BY CAST(transaction_date AS DATE)
+ORDER BY report_date;</pre>
+      </div>
+
+      <div class="sql-pane" id="sql-window">
+        <button class="copy-sql" data-copy="code-window">Copy</button>
+        <pre class="sql-code" id="code-window">-- Month-over-month revenue movement
+WITH monthly AS (
+    SELECT
+        DATEFROMPARTS(YEAR(transaction_date), MONTH(transaction_date), 1) AS month_start,
+        SUM(revenue) AS revenue
+    FROM transactions
+    GROUP BY DATEFROMPARTS(YEAR(transaction_date), MONTH(transaction_date), 1)
+)
+SELECT
+    month_start,
+    revenue,
+    LAG(revenue) OVER (ORDER BY month_start) AS previous_month,
+    revenue - LAG(revenue) OVER (ORDER BY month_start) AS revenue_change,
+    ROUND(
+        100.0 * (revenue - LAG(revenue) OVER (ORDER BY month_start))
+        / NULLIF(LAG(revenue) OVER (ORDER BY month_start), 0), 2
+    ) AS mom_growth_pct
+FROM monthly
+ORDER BY month_start;</pre>
+      </div>
+
+      <div class="sql-pane" id="sql-cte">
+        <button class="copy-sql" data-copy="code-cte">Copy</button>
+        <pre class="sql-code" id="code-cte">-- Build a reusable partner-performance dataset
+WITH partner_metrics AS (
+    SELECT
+        content_partner,
+        COUNT(DISTINCT subscriber_id) AS subscribers,
+        SUM(revenue) AS revenue,
+        COUNT(*) AS transactions
+    FROM content_transactions
+    GROUP BY content_partner
+),
+ranked AS (
+    SELECT
+        *,
+        DENSE_RANK() OVER (ORDER BY revenue DESC) AS revenue_rank
+    FROM partner_metrics
+)
+SELECT *
+FROM ranked
+WHERE revenue_rank &lt;= 10
+ORDER BY revenue_rank;</pre>
+      </div>
+
+      <div class="sql-pane" id="sql-quality">
+        <button class="copy-sql" data-copy="code-quality">Copy</button>
+        <pre class="sql-code" id="code-quality">-- Data-quality checks before reporting
+SELECT
+    COUNT(*) AS total_rows,
+    SUM(CASE WHEN subscriber_id IS NULL THEN 1 ELSE 0 END) AS null_subscribers,
+    SUM(CASE WHEN revenue IS NULL THEN 1 ELSE 0 END) AS null_revenue,
+    SUM(CASE WHEN revenue &lt; 0 THEN 1 ELSE 0 END) AS negative_revenue,
+    COUNT(*) - COUNT(DISTINCT transaction_id) AS duplicate_transactions
+FROM transactions;
+
+-- Find duplicate transaction IDs
+SELECT transaction_id, COUNT(*) AS duplicate_count
+FROM transactions
+GROUP BY transaction_id
+HAVING COUNT(*) &gt; 1
+ORDER BY duplicate_count DESC;</pre>
+      </div>
+
+      <div class="sql-pane" id="sql-ranking">
+        <button class="copy-sql" data-copy="code-ranking">Copy</button>
+        <pre class="sql-code" id="code-ranking">-- Rank content partners within each month
+SELECT
+    month_start,
+    content_partner,
+    revenue,
+    RANK() OVER (
+        PARTITION BY month_start
+        ORDER BY revenue DESC
+    ) AS monthly_rank,
+    SUM(revenue) OVER (
+        PARTITION BY month_start
+    ) AS monthly_total,
+    ROUND(
+        100.0 * revenue /
+        NULLIF(SUM(revenue) OVER (PARTITION BY month_start), 0), 2
+    ) AS revenue_share_pct
+FROM partner_monthly_revenue
+ORDER BY month_start, monthly_rank;</pre>
+      </div>
+
+      <div class="sql-pane" id="sql-cohort">
+        <button class="copy-sql" data-copy="code-cohort">Copy</button>
+        <pre class="sql-code" id="code-cohort">-- Simple subscriber cohort retention view
+WITH first_activity AS (
+    SELECT
+        subscriber_id,
+        MIN(CAST(activity_date AS DATE)) AS first_date
+    FROM subscriber_activity
+    GROUP BY subscriber_id
+)
+SELECT
+    DATEFROMPARTS(YEAR(f.first_date), MONTH(f.first_date), 1) AS cohort_month,
+    DATEFROMPARTS(YEAR(a.activity_date), MONTH(a.activity_date), 1) AS activity_month,
+    COUNT(DISTINCT a.subscriber_id) AS active_subscribers
+FROM first_activity f
+JOIN subscriber_activity a
+    ON a.subscriber_id = f.subscriber_id
+GROUP BY
+    DATEFROMPARTS(YEAR(f.first_date), MONTH(f.first_date), 1),
+    DATEFROMPARTS(YEAR(a.activity_date), MONTH(a.activity_date), 1)
+ORDER BY cohort_month, activity_month;</pre>
+      </div>
+
+      <div class="sql-note">The examples demonstrate practical analytics patterns: aggregation, CTEs, window functions, ranking, data-quality checks, growth analysis and cohort reporting.</div>
+    </div>
+
+    <div class="sql-topics reveal">
+      <div class="sql-topic"><b>Joins & Relationships</b><span>INNER, LEFT and multi-table joins for combining transactional, subscriber and content datasets.</span></div>
+      <div class="sql-topic"><b>Advanced Aggregation</b><span>GROUP BY, CASE, HAVING, conditional metrics and business-rule calculations.</span></div>
+      <div class="sql-topic"><b>Window Functions</b><span>LAG, LEAD, RANK, DENSE_RANK and running totals for trend and comparative analysis.</span></div>
+      <div class="sql-topic"><b>CTEs & Subqueries</b><span>Readable multi-step transformations that make complex reporting logic easier to maintain.</span></div>
+      <div class="sql-topic"><b>Data Validation</b><span>Null checks, duplicate detection, reconciliation and anomaly checks before dashboards.</span></div>
+      <div class="sql-topic"><b>BI-Ready SQL</b><span>Queries shaped for Power BI, Looker Studio and recurring business reporting.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="workflow">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">My Process</div>
+      <div class="section-title">From Raw Data to Decision</div>
+    </div>
+    <div class="workflow-grid reveal">
+      <div class="workflow-step"><div class="num">01</div><b>Understand</b><span>Clarify the business question and KPI.</span></div>
+      <div class="workflow-step"><div class="num">02</div><b>Extract</b><span>SQL, Excel, APIs or source systems.</span></div>
+      <div class="workflow-step"><div class="num">03</div><b>Clean</b><span>Validate, transform and reconcile.</span></div>
+      <div class="workflow-step"><div class="num">04</div><b>Analyze</b><span>Find trends, drivers and anomalies.</span></div>
+      <div class="workflow-step"><div class="num">05</div><b>Communicate</b><span>Dashboard, insight and recommendation.</span></div>
     </div>
   </div>
 </section>
@@ -264,7 +654,7 @@
     </div>
     <div class="skills-grid reveal">
       <div class="skill-card"><div class="skill-icon">📊</div><div class="skill-name">Power BI & DAX</div><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
-      <div class="skill-card"><div class="skill-icon">🗄</div><div class="skill-name">SQL</div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
+      <div class="skill-card"><div class="skill-icon">🗄</div><div class="skill-name">SQL — Advanced</div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
       <div class="skill-card"><div class="skill-icon">📗</div><div class="skill-name">Excel (Advanced)</div><div class="skill-bar"><div class="skill-fill" style="width:93%"></div></div></div>
       <div class="skill-card"><div class="skill-icon">📈</div><div class="skill-name">Looker Studio</div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
       <div class="skill-card"><div class="skill-icon">🧹</div><div class="skill-name">Data Cleaning & Modeling</div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
@@ -288,8 +678,14 @@
   </div>
 </section>
 
+
+<div class="dashboard-modal" id="dashboardModal" aria-hidden="true">
+  <button class="dashboard-close" id="dashboardClose" aria-label="Close dashboard preview">&times;</button>
+  <img id="dashboardModalImage" src="" alt="Expanded dashboard preview">
+</div>
+
 <footer>
-  Built by <span>Ayomide Ajewole</span> · Lagos, Nigeria · 2026
+  Built by <span>Ayomide Ajewole</span> · Data Analytics · Lagos, Nigeria · 2026
 </footer>
 
 <script>
@@ -298,6 +694,74 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
   reveals.forEach(el => observer.observe(el));
+
+  // SQL Lab tabs
+  document.querySelectorAll('.sql-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.sql-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.sql-pane').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('sql-' + tab.dataset.sql).classList.add('active');
+    });
+  });
+
+  // Copy SQL snippets
+  document.querySelectorAll('.copy-sql').forEach(button => {
+    button.addEventListener('click', async () => {
+      const code = document.getElementById(button.dataset.copy).innerText;
+      try {
+        await navigator.clipboard.writeText(code);
+        const original = button.innerText;
+        button.innerText = 'Copied!';
+        setTimeout(() => button.innerText = original, 1200);
+      } catch (err) {
+        button.innerText = 'Select & Copy';
+        setTimeout(() => button.innerText = 'Copy', 1200);
+      }
+    });
+  });
+  // Dashboard lightbox
+  const dashboardModal = document.getElementById('dashboardModal');
+  const dashboardModalImage = document.getElementById('dashboardModalImage');
+  const dashboardClose = document.getElementById('dashboardClose');
+
+  function openDashboard(src, alt) {
+    dashboardModalImage.src = src;
+    dashboardModalImage.alt = alt || 'Expanded dashboard preview';
+    dashboardModal.classList.add('open');
+    dashboardModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDashboard() {
+    dashboardModal.classList.remove('open');
+    dashboardModal.setAttribute('aria-hidden', 'true');
+    dashboardModalImage.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.dashboard-preview').forEach(preview => {
+    preview.addEventListener('click', () => {
+      const img = preview.querySelector('img');
+      openDashboard(preview.dataset.dashboard, img.alt);
+    });
+    preview.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const img = preview.querySelector('img');
+        openDashboard(preview.dataset.dashboard, img.alt);
+      }
+    });
+  });
+
+  dashboardClose.addEventListener('click', closeDashboard);
+  dashboardModal.addEventListener('click', e => {
+    if (e.target === dashboardModal) closeDashboard();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && dashboardModal.classList.contains('open')) closeDashboard();
+  });
+
 </script>
 </body>
 </html>
